@@ -14,6 +14,9 @@ body {
 #bingo > div {
   display: flex;
   border-style: solid;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-weight: bold;
   border-width: 3px;
   border-color: rgb(255, 238, 250);
   padding: 12px;
@@ -24,11 +27,12 @@ body {
 #bingo {
   font-display: inherit;
 }
-#button {
-  width: 100%;
-  height: 50px;
-}
-#clean {
+#press {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 133, 154);
+  border-color: aliceblue;
   width: 100%;
   height: 50px;
 }
