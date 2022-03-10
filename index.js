@@ -22,6 +22,14 @@ function selectNumber(event) {
     clickedDayNode.classList.add('selected-number')
 }
 
+var randomNumberObject = Math.floor(Math.random() * 76);
+
+function randNumberScript() {
+
+    document.getElementById("theNumber").innerHTML = randomNumberObject;
+
+}
+
 function onLoad() {
     displayNumberFields()
 }
