@@ -16,9 +16,32 @@ body {
   padding: 12px;
   border-radius: 8px;
   display: inline-block;
-  width: 58%;
+  width: 80%;
 }
 #button {
   width: 100%;
   height: 50px;
+}
+.number {
+  background-color: rgb(223, 116, 255);
+  display: inline-block;
+  width: 97px;
+  height: 97px;
+  text-align: center;
+  line-height: 97px;
+  font-size: large;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-width: 2px;
+  margin: 2px;
+  border-radius: 10px;
+}
+.number:hover {
+  border-color: rgb(253, 232, 253);
+  background-color: rgb(255, 130, 255);
+  cursor: pointer;
+}
+.selected-number {
+  border-color: rgb(253, 232, 253);
+  background-color: rgb(255, 130, 255);
 }
