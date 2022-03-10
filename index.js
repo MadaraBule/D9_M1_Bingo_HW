@@ -16,20 +16,14 @@ function displayNumberFields() {
 function selectNumber(event) {
     let clickedNumberNode = event.target
     let previouslySelectedNumber = document.querySelector('.selected-number')
-    if (previouslySelectedNumber !== null) {
-        previouslySelectedNumber.classList.remove('selected-number')
-    }
-    clickedDayNode.classList.add('selected-number')
+    clickedNumberNode.classList.add('selected-number')
 }
 
 var randomNumberObject = Math.floor(Math.random() * 76);
 
 function randNumberScript() {
-
     document.getElementById("theNumber").innerHTML = randomNumberObject;
-
 }
-
 function onLoad() {
     displayNumberFields()
 }
