@@ -13,25 +13,32 @@ function displayNumberFields() {
         numberNode.appendChild(numberSquare)
     }
 }
-// function selectNumber(event) {
-//     let clickedNumberNode = event.target
-//     let previouslySelectedNumber = document.querySelector('.selected-number')
-//     clickedNumberNode.classList.add('selected-number')
-//}
-function randomNNumber() {
-    var randomNumberObject = Math.floor(Math.random() * 76)
 
+const getRandomNum = function (range) {
+    const randIndex = Math.floor(Math.random() * range.length);
+    const random = range.splice(randIndex, 1)[0];
+    return random;
+};
+
+function selectNumber(event) {
+    let clickedNumberNode = event.target
+    let previouslySelectedNumber = document.querySelector('.selected-number')
+    clickedNumberNode.classList.add('selected-number')
 }
-
-
 
 function randNumberScript() {
     document.getElementById("theNumber").innerHTML = randomNumberObject;
 }
-function onLoad() {
-    displayNumberFields()
-}
-window.onload = onLoad;
+window.onload = function () {
+    generateMainBoard();
+    const randBtn = document.getElementById("randBtn");
+    const range = fillArray();
+    randBtn.addEventListener("click", function () {
+        generateRandNumber(range);
+    });
+    const userBoardBtn = document.getElementById("userBoardBtn");
+    userBoardBtn.onclick = generateUserBoards;
+};
 /*function randomClick() {
 let cellsContainer = document.querySelectorAll(".cell")
 
